@@ -24,10 +24,10 @@ nums.length % 2 == 0
  * @return {number[]}
  */
 var decompressRLElist = function (nums) {
-  let pairsList = []
+  const pairsList = []
   let output = []
-  for (let i = 0; i < nums.length; i ++) {
-    if((i + 1) % 2 !== 0) { //if odd
+  for (let i = 0; i < nums.length; i++) {
+    if ((i + 1) % 2 !== 0) { // if odd
       var pair = []
       pair[0] = nums[i]
     } else {
@@ -36,9 +36,9 @@ var decompressRLElist = function (nums) {
     }
   }
   pairsList.forEach(pair => {
-    let a = pair[0]
-    let b = pair[1]
-    let decompressed = []
+    const a = pair[0]
+    const b = pair[1]
+    const decompressed = []
     for (let i = 0; i < a; i++) {
       decompressed.push(b)
     }
