@@ -36,19 +36,19 @@ Output: true
  * @param {string}
  * @return {boolean}
  */
-var isValid = function(s) {
-  let closedParens = []
-  let pairs = {
-    '{':'}',
-    '[':']',
-    '(':')'
+var isValid = function (s) {
+  const closedParens = []
+  const pairs = {
+    '{': '}',
+    '[': ']',
+    '(': ')'
   }
-  for (let i = 0; i < s.length; i ++) {
-    let char = s[i]
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i]
     if (pairs.hasOwnProperty(char)) {
       closedParens.push(pairs[char])
     } else {
-      let lastChar = closedParens[closedParens.length - 1]
+      const lastChar = closedParens[closedParens.length - 1]
       if (closedParens.length === 0 || char !== lastChar) {
         return false
       } else {
@@ -56,7 +56,7 @@ var isValid = function(s) {
       }
     }
   }
-  if(closedParens.length > 0) {
+  if (closedParens.length > 0) {
     return false
   }
   return true

@@ -22,8 +22,8 @@ Output: "lovely"
  * @param {string} str
  * @return {string}
  */
-var toLowerCase = function(str) {
-  let lowercase = {
+var toLowerCase = function (str) {
+  const lowercase = {
     A: 'a',
     B: 'b',
     C: 'c',
@@ -51,7 +51,7 @@ var toLowerCase = function(str) {
     Y: 'y',
     Z: 'z'
   }
-  let stringArr = str.split('')
+  const stringArr = str.split('')
   return stringArr.map(l => {
     return lowercase.hasOwnProperty(l) ? lowercase[l] : l
   }).join('')

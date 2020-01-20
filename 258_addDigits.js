@@ -7,8 +7,8 @@ Given a non-negative integer num, repeatedly add all its digits until the result
 Example:
 
 Input: 38
-Output: 2 
-Explanation: The process is like: 3 + 8 = 11, 1 + 1 = 2. 
+Output: 2
+Explanation: The process is like: 3 + 8 = 11, 1 + 1 = 2.
              Since 2 has only one digit, return it.
 Follow up:
 Could you do it without any loop/recursion in O(1) runtime?
@@ -18,13 +18,13 @@ Could you do it without any loop/recursion in O(1) runtime?
  * @param {number} num
  * @return {number}
  */
-var addDigits = function(num) {
-  let oneDigit = num < 10
+var addDigits = function (num) {
+  const oneDigit = num < 10
   if (oneDigit) {
     return num
   } else {
-    let arrString = num.toString().split('')
-    let subtotal = arrString.reduce((total, strDigit) => {
+    const arrString = num.toString().split('')
+    const subtotal = arrString.reduce((total, strDigit) => {
       return total + Number(strDigit)
     }, 0)
     return addDigits(subtotal)
