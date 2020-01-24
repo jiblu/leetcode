@@ -67,6 +67,9 @@ var getDecimalValue = function (head) {
 
 /*
 
-Runtime: 48 ms, faster than 95.00% of JavaScript online submissions for Convert Binary Number in a Linked List to Integer.
-Memory Usage: 33.8 MB, less than 100.00% of JavaScript online submissions for Convert Binary Number in a Linked List to Integer.
+have some array that holds the values of each node
+102 / 102 test cases passed.
+Status: Accepted
+Runtime: 48 ms
+Memory Usage: 33.8 MB
 */
