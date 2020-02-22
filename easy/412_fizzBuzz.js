@@ -34,10 +34,10 @@ Return:
  * @param {number} n
  * @return {string[]}
  */
-var fizzBuzz = function(n) {
-  let resultArray = []
-  for (let i = 1; i < n + 1; i ++) {
-    let number = i
+var fizzBuzz = function (n) {
+  const resultArray = []
+  for (let i = 1; i < n + 1; i++) {
+    const number = i
     if (number % 3 === 0 && number % 5 === 0) {
       resultArray.push('FizzBuzz')
     } else if (number % 3 === 0) {
@@ -47,7 +47,7 @@ var fizzBuzz = function(n) {
     } else {
       resultArray.push(number.toString())
     }
-  } 
+  }
   return resultArray
 }
 

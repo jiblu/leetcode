@@ -19,11 +19,11 @@ Output: false
  * @param {string} s
  * @return {boolean}
  */
-var isPalindrome = function(s) {
+var isPalindrome = function (s) {
   // create string without spaces or other punctuation
-  let alphanum ='abcdefghijklmnopqrstuvwxyz0123456789'
-  let array = s.toLowerCase().split('')
-  let filteredArray = array.filter((char) => {
+  const alphanum = 'abcdefghijklmnopqrstuvwxyz0123456789'
+  const array = s.toLowerCase().split('')
+  const filteredArray = array.filter((char) => {
     return alphanum.indexOf(char) >= 0
   })
   return filteredArray.join('') === filteredArray.reverse().join('')

@@ -24,11 +24,11 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
  * @param {number[]} prices
  * @return {number}
  */
-var maxProfit = function(prices) {
+var maxProfit = function (prices) {
   let max = null
   let min = null
   for (let i = 0; i < prices.length; i++) {
-    let price = prices[i]
+    const price = prices[i]
     if (max === null || price > max) {
       max = price
     } else if (price < min || min === null) {

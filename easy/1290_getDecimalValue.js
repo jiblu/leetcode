@@ -27,7 +27,6 @@ Example 5:
 
 Input: head = [0,0]
 Output: 0
- 
 
 Constraints:
 
@@ -48,18 +47,18 @@ Each node's value is either 0 or 1.
  * @return {number}
  */
 var getDecimalValue = function (head) {
-  let nodeValues = []
+  const nodeValues = []
   let output = 0
-  let getNodeValues = node => {
-      nodeValues.push(node.val)
+  const getNodeValues = node => {
+    nodeValues.push(node.val)
     if (node.next) {
-      getNodeValues(node.next)    
+      getNodeValues(node.next)
     }
   }
   getNodeValues(head)
-  for (let i = 0; i < nodeValues.length; i ++) {
-    let power = nodeValues.length - i - 1
-    let nodeVal = nodeValues[i]
+  for (let i = 0; i < nodeValues.length; i++) {
+    const power = nodeValues.length - i - 1
+    const nodeVal = nodeValues[i]
     output += nodeVal * Math.pow(2, power)
   }
   return output

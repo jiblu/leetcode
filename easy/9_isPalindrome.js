@@ -26,17 +26,17 @@ Coud you solve it without converting the integer to a string?
  * @param {number} x
  * @return {boolean}
  */
-var isPalindrome = function(x) {
+var isPalindrome = function (x) {
   let originalVal = x
-  let isNegative = x < 0
-  let digits = []
+  const isNegative = x < 0
+  const digits = []
   let reverseDigits = 0
   let biggestPlace = 0
   if (isNegative) { return false }
   if (originalVal === 0) { return true }
   while (originalVal > 9) {
-    let remainder = originalVal % 10
-    originalVal = (originalVal - remainder)/10
+    const remainder = originalVal % 10
+    originalVal = (originalVal - remainder) / 10
     digits.push(remainder)
   }
   digits.push(originalVal)

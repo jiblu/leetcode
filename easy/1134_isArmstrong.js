@@ -10,31 +10,31 @@ Example 1:
 
 Input: 153
 Output: true
-Explanation: 
+Explanation:
 153 is a 3-digit number, and 153 = 1^3 + 5^3 + 3^3.
 Example 2:
 
 Input: 123
 Output: false
-Explanation: 
+Explanation:
 123 is a 3-digit number, and 123 != 1^3 + 2^3 + 3^3 = 36.
 */
 /**
  * @param {number} N
  * @return {boolean}
  */
-var isArmstrong = function(N) {
+var isArmstrong = function (N) {
   let digits = 0
-  let digitsArr = []
+  const digitsArr = []
   let NCopy = N
   while (NCopy > 9) {
-    let remainder = NCopy % 10
+    const remainder = NCopy % 10
     digitsArr.push(remainder)
     NCopy = Math.floor(NCopy / 10)
   }
   digitsArr.push(NCopy)
   digits = digitsArr.length
-  let final = digitsArr.reduce((sum, next) => {
+  const final = digitsArr.reduce((sum, next) => {
     return sum + Math.pow(next, digits)
   }, 0)
   return N === final

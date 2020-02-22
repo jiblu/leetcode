@@ -20,7 +20,7 @@ return [0, 1].
  */
 var twoSum = function (nums, target) {
   const possibleSecondValues = {}
-  let result = null
+  const result = null
   for (let i = 0; i < nums.length; i++) {
     const currNumber = nums[i]
     const possibleSecondVal = target - currNumber
@@ -28,7 +28,7 @@ var twoSum = function (nums, target) {
       possibleSecondValues[possibleSecondVal] = i
     } else {
       return [possibleSecondValues[currNumber], i]
-    } 
+    }
   }
 }
 

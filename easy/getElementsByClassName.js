@@ -16,10 +16,8 @@ ____ul___   div
 |   |    |
 li1 li2  li3
 
-
 */
 
-
-let getElementsByClassName = (node) => {
+const getElementsByClassName = (node) => {
 
 }
